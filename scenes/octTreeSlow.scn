@@ -1,0 +1,188 @@
+// This is a test scene for Specter.  Try running "specter test.scn".
+
+xres 512
+yres 512
+filename "image_octTreeSlow.ppm"
+sample_size 16
+shutter_time 1.0
+
+
+camera pinhole {
+  eye [ 0.0, 0.0, 13.0 ]
+  lookat [ 0.0, 0.0, 0.0 ]
+  up [ 0.0, 1.0, 0.0 ]
+  hfov 22.0
+}
+
+background constant {
+  color [ 0.5, 0.8, 0.9 ]
+}
+
+ambient [ 0.6, 0.6, 0.6 ]
+
+light point {
+  position [ -30.0, -20.0, 80.0 ]
+  color [ 0.7, 0.9, 0.9 ]
+}
+light point {
+  position [ -20.0, -50.0, 40.0 ]
+  color [ 0.6, 0.1, 0.1 ]
+}
+
+scene group {
+  depth 1.0
+  sphere {
+    material lambertian {
+      color [ 0.1, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 6, 6, -19 ]
+    radius .98
+  }
+	 
+  sphere {
+    material lambertian {
+      color [ 0.1, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ -2, -2, 3 ]
+    radius .98
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.9, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.5, 0.3, 0.3 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2, 2.1, -8 ]
+    radius 2
+  }
+  sphere {
+    material lambertian {
+      color [ 0.3, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 2.1, 2, -8 ]
+    radius 2
+  }
+}

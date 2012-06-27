@@ -1,0 +1,38 @@
+Michael Boone
+SID: 992186566
+
+I set up some sample scenes to show  what is benificial to the oct tree structure and what is not.
+
+Since we are only testing for spheres the box intersection of the oct tree takes up a lot more time than just testing the spheres themselves.
+
+However, i tried to set it up so that there are 16 spheres in the upper right hand quadrant of a one level oct tree. This should be fast for us as
+it only checks those spheres if the ray passes through that quadrant
+
+This is image_octTreeFast.ppm
+
+Setup/load time:        0.00183 seconds
+Render time:            67.7 seconds
+Post-process time:      0.00367 seconds
+
+The books grid method would perform slighlty poorer here as we dont travers all the leafs of the tree, we only traverse leaves
+which contain objects.
+
+the worst case for our oct tree is when all the objects are in all the quadrants. This is as it is in
+
+image_octTreeSlow.ppm
+
+Setup/load time:        0.00199 seconds
+Render time:            116 seconds
+Post-process time:      0.00419 seconds
+
+The books grid method would perform better here since it would at least skip the object for most of the rays that do not pass through where it is displayed.
+
+Our algorythm will do better for most sets of objects which do not take up the full camera space as it will not check for intersections of rays which do not hit the outer
+box of the oct tree.
+
+README FOR THIS ASSIGNMENT:
+
+I added an OctTree class which the Group class uses to store its objects.
+This class provides the functionality of an octtree and is used as such for rendering.
+
+I also added a boxCheck, a pointCheck and an intersect function to the BoundingBox class that handles said things.

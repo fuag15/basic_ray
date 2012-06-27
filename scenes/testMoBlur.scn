@@ -1,0 +1,62 @@
+// This is a test scene for Specter.  Try running "specter test.scn".
+
+xres 512
+yres 512
+filename "image_moblur2.ppm"
+sample_size 16
+shutter_time 1.0
+
+camera pinhole {
+  eye [ -10.0, 11.0, -2.0 ]
+  lookat [ 1.0, 1.0, 2.4 ]
+  up [ 0.0, 0.0, 1.0 ]
+  hfov 22.0
+}
+
+background constant {
+  color [ 0.5, 0.8, 0.9 ]
+}
+
+ambient [ 0.6, 0.6, 0.6 ]
+
+light point {
+  position [ -30.0, -20.0, 80.0 ]
+  color [ 0.7, 0.9, 0.9 ]
+}
+light point {
+  position [ -20.0, -50.0, 40.0 ]
+  color [ 0.6, 0.1, 0.1 ]
+}
+
+scene group {
+  depth 1.0
+  moving_sphere {
+    material lambertian {
+      color [ 0.1, 0.3, 0.9 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ 1.5, 3.5, 4.0 ]
+    radius 2.4
+    speed 0.7
+    direction [ 0.0, 1.0, 0.0 ]
+  }
+  sphere {
+    material lambertian {
+      color [ 1.0, 0.2, 0.2 ]
+      Kd 0.7
+      Ka 0.3
+    }
+    center [ -0.5, -1.5, 2.0 ]
+    radius 1.8
+  }
+  sphere {
+    material lambertian {
+      color [ 1.0, 0.9, 0.1 ]
+      Kd 0.6
+      Ka 0.4
+    }
+    center [ 0.5, 1.0, 1.0 ]
+    radius 1.0
+  }
+}

@@ -1,0 +1,7 @@
+This project was made while i was studying ray tracers, it does basic ray tracing as well as having Oct Tree bounding box hierarchy Optimization, glossy reflection, and a simple global illumination model which collects N bounces of light.
+
+This is all coded from scratch, there was a basic bounding box and sphere model with simple shading, all the ray tracing effects were added / contributed by me.
+
+In the pictures you'll see some examples of glossy reflections, global illumination models, depth of field, motion blur, anti-aliasing, and oct-tree optimization.
+
+These effects and scenes are parsed from an ascii file storage system, I think it could use some more polish and some better examples of the effects and would like to add semi translucent surfaces using the glossy reflection model as a base but I haven't gotten the right combination of motivation and time to open this back up.
