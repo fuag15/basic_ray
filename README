@@ -5,3 +5,5 @@ This is all coded from scratch, there was a basic bounding box and sphere model 
 In the pictures you'll see some examples of glossy reflections, global illumination models, depth of field, motion blur, anti-aliasing, and oct-tree optimization.
 
 These effects and scenes are parsed from an ascii file storage system, I think it could use some more polish and some better examples of the effects and would like to add semi translucent surfaces using the glossy reflection model as a base but I haven't gotten the right combination of motivation and time to open this back up.
+
+For some pretty pictures of this project and other non-code related things I'm doing check out http://www.steelpigeondesign.com/project_categories/1/projs/6
